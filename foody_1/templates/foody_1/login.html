@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap3 %}
+
+{% block headblock %}
+ 
+{% endblock %}
+
+{% block content %}
+<section id="he" class="he d-flex  align-items-center section-bg">
+  <div class="container " data-aos="fade-up" >
+    <form method="POST" class="form">
+        <h1 class="cen">Log In</h1>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+    <input type="submit" onclick="clickAlert()" value="Login" class="in">
+    </form>
+  </div>
+</section>
+<style>  
+  .he {
+    padding: 15rem 45.5rem 10rem 45.5rem;
+  }
+
+  .form {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 4rem;
+  }
+  
+label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+  .in{
+    color: #fff;
+    background: #df0606;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .in:hover{
+    background: #ffbe33;
+  }
+
+  .cen {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form input{
+    height: 45px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 17px;
+    margin-bottom: 1.3rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+  .form input:focus{
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  }
+  
+  
+</style>
+{% endblock %}

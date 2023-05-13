@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %} 
+{% load bootstrap3 %} 
+{% block headblock %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css?family=Poor+Story"
+  rel="stylesheet"
+/>
+{% endblock %} 
+{% block fullscreen %}
+<section
+  id="hero"
+  class="hero d-flex align-items-center section-bg"
+  style="padding-top: 110px"
+>
+  <div class="container" style="padding-top: 40px">
+    <div class="row justify-content-between gy-5">
+      <form method="POST" class="form container">
+        <h3 class="cen">Feedback</h3>
+        {% csrf_token %} 
+        {% bootstrap_form form %}
+          <input type="submit" value="Submit" class="in" />
+      </form>
+    </div>
+  </div>
+</section>
+<style media="screen">
+  .form-control {
+    height: 45px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .form {
+    width: 50%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 5rem;
+  }
+
+  .cen {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+
+  .form input {
+    width: 100%;
+    font-size: 17px;
+    margin-bottom: 1.3rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+  .form input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .in {
+    padding: 10px;
+    color: #fff;
+    background: #df0606;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .in:hover {
+    background: #ffbe33;
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% load static %} {% block headblock %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css?family=Poor+Story"
+  rel="stylesheet"
+/>
+{% endblock %} {% block fullscreen %}
+<section id="hero" class="hero d-flex align-items-center section-bg gap">
+  <div class="container">
+    <div class="row justify-content-between gy-5">
+      <h2 class="head_mansi">Thank You For visiting</h2>
+      <p class="link">Let Your Food Choose You !</p>
+      <hr
+        style="
+          height: 2px;
+          border-width: 0;
+          color: gray;
+          background-color: gray;
+        "
+      />
+    </div>
+  </div>
+</section>
+
+<style media="screen">
+  .link {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Poor Story", cursive;
+  }
+  .under_tag {
+    color: black;
+    font-size: 25px;
+    font-family: "Poor Story", cursive;
+  }
+  .head_mansi {
+    color: black;
+    font-size: 100px;
+    text-align: center;
+    font-family: "Poor Story", cursive;
+  }
+</style>
+{% endblock %}

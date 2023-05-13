@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block headblock %}
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Poor+Story"
+  rel="stylesheet"
+/>
+{% endblock %} 
+{% block fullscreen %}
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center section-bg">
+  <div class="container">
+    <div class="row justify-content-between gy-5">
+      <div
+        class="col-lg-7 order-2 order-lg-2 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start"
+      >
+        <h2 data-aos="fade-up">Enjoy Your Healthy<br />Delicious Food</h2>
+       
+        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+          {% if not user.is_authenticated %}
+            <h3>
+              Do You Want To Sell Food? <br/><br/>
+              <a
+                align="center"
+                href="{% url 'seller:seller_form' %}"
+                class="btn-book-a-table">
+                sell on Foody!<br/>
+              </a>
+            </h3>
+          {% else %}
+            <h3>
+              Feeling Moody ?<br/> Cant Decide What To Eat ?<br/><br/>
+              <a 
+                align="center"
+                href="{% url 'foody_1:confused' %}"
+                class="btn-book-a-table">
+                We Can Help !<br/>
+              </a>
+            </h3>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+        <img 
+          src="/static/img/hero.png"
+          class="img-fluid"
+          alt=""
+          data-aos="zoom-out"
+          data-aos-delay="300"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hero Section -->
+
+{% endblock %}

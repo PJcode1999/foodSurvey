@@ -1,0 +1,75 @@
+
+<!-- ======= Header ======= -->
+<body>
+<header id="header" class="header fixed-top d-flex align-items-center ">
+  <div class="container d-flex align-items-center justify-content-between"> 
+    <a
+      href="{% url 'home' %}"
+      class="logo d-flex align-items-center me-auto me-lg-0"
+    >
+      <h1>Food By Mood<span>.</span></h1>
+    </a>
+            
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li>
+          {% if user.is_authenticated %}
+          <a class="{% if request.path == '/' %}  nav-link active {% endif %}"
+            href="{% url 'home' %}">
+              Home
+          </a>
+        </li>
+        <li>
+          <a class="{% if request.path == '/test/' %}  nav-link active {% endif %}"
+            href="{% url 'test' %}">
+              Menu
+          </a>
+             {% else %}
+          <a class="{% if request.path == '/' %}  nav-link active {% endif %}"
+            href="{% url 'home' %}">
+              Home
+          </a>
+            {% endif %}
+        </li>       
+           
+        <li>
+          <a href="{% url "about" %}" 
+            class="{% if request.path == '/about/' %}  nav-link active {% endif %}">
+            About
+          </a>
+        </li>       
+        <li>
+          <a href="{% url "gallery" %}" 
+            class="{% if request.path == '/gallery/' %}  nav-link active {% endif %}">
+            Gallery
+          </a>
+        </li>       
+        <li>
+          <a href="{% url "contact" %}" 
+            class="{% if request.path == '/contact/' %}  nav-link active {% endif %}">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- .navbar -->
+  </div>
+  <div>
+      {% if user.is_authenticated %} 
+        <div style="text-align:center;  padding-bottom:10px;">
+          <h4 style="padding:10px;"><i>Welcome! </i><span>{{ user.first_name }} {{ user.last_name }}</span></h4>
+          <a href="{% url 'foody_1:logout' %}" class="btn-book-a-table">Log Out</a>
+        </div>
+      {% else %}
+          <div style="margin-right: 50px; padding:10px;">
+            <a href="{% url 'foody_1:login' %}" class="btn-book-a-table">Log In</a> 
+          </div>
+          <div style="margin-right: 50px; padding:10px;">
+            <a href="{% url 'foody_1:signup' %}" class="btn-book-a-table">Sign Up</a>
+          </div>
+      {% endif %}
+  </div>
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+</header>
+<!-- End Header -->

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+{% endblock %}
+
+{% block fullscreen %}
+<section id="menu" class="menu section-bg">
+  <div class="container" data-aos="fade-up" style="padding-bottom: 310px;">
+    <div class="section-header " style="padding-top: 20px;"> 
+      <p>Chinese</p><hr>
+      <ul>
+       <a class='link' href="{% url 'foody_1:noodles' %}">Noodles</a>
+       <a class='link' href="{% url 'foody_1:chillyPaneer' %}"> Chilly Paneer</a>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style media="screen">
+.link{
+  text-align: center;
+    display: block;
+  font-size: 30px;
+  font-family: 'Poor Story', cursive;
+}
+.link:hover{
+  color: #ffbe33;
+}
+.link:hover{
+  color: #ffbe33;
+}
+.under_tag{
+  color:black;
+  font-size: 25px;
+  font-family: 'Poor Story', cursive;
+}
+.head_mansi{
+
+  color:black;
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Poor Story', cursive;
+}
+</style>
+{% endblock %}

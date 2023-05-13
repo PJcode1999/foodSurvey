@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headblock %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+  
+{% endblock %}
+
+{% block fullscreen %}
+<main id="main">
+<section id="menu" class="menu section-bg">
+  <div class="container-md" data-aos="fade-up">
+    <div class="section-header " style="padding-top: 20px;"> 
+      <h2>Our Cuisines</h2>
+      <p>Check Our <span>Available Cuisines</span></p>
+    </div>
+
+    <div class="col">
+      <div class="col-lg-4 " style="padding-bottom: 25px;">
+        <div class="card" style="width: 35rem; ">
+          <div class="card-body">
+            <a href="{% url 'foody_1:northindian' %}" >
+            <h3 class="card-text">North Indian</h3>
+            <img src="/static/img/menu/north.jpg"
+            class="card-img-top" 
+            alt="North Indian">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 " style="padding-bottom: 25px;">
+        <div class="card" style="width: 35rem; ">
+          <div class="card-body">
+            <a href="{% url 'foody_1:southindian' %}">
+            <h3 class="card-text">South Indian</h3>
+            <img  src="/static/img/menu/south.jpg" 
+            class="card-img-top" 
+            alt="south indian">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 " style="padding-bottom: 25px;">
+        <div class="card" style="width: 35rem; ">
+          <div class="card-body">
+            <a href="{% url 'foody_1:italian' %}">
+            <h3 class="card-text">Italian</h3>
+            <img  src="/static/img/menu/italian.jpg" 
+            class="card-img-top" 
+            alt="italian">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 " style="padding-bottom: 25px;">
+        <div class="card" style="width: 35rem; ">
+          <div class="card-body">
+            <a href="{% url 'foody_1:chinese' %}">
+            <h3 class="card-text">Chinese</h3>
+            <img  src="/static/img/menu/chinese.jpg" 
+            class="card-img-top" 
+            alt="chinese">
+          </div>
+        </div>
+      </div>
+
+      <div class=" col-lg-4 " style=" padding-bottom: 25px;">
+        <a href="{% url 'foody_1:confused' %}">
+        <div class="card" style="width: 35rem; height: 37.2rem;">
+          <div class="card-body"  style=" padding-top: 75px;">
+            <p class=" f card-text">Hello <span>{{ user.first_name }} {{ user.last_name }} !</span></p>
+            <h4 class="card-text">You're successfully logged in.<br/><br/>
+            Feeling Moody ? <br/><br/>
+            Can't decide ? <br/><br/>
+            We can help !</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 " style="padding-bottom: 25px;">
+        <div class="card" style="width: 35rem; ">
+          <div class="card-body">
+            <a href="{% url 'foody_1:continental' %}">
+            <h3 class="card-text">Continental</h3>
+            <img  src="/static/img/menu/continental.jpg" 
+            class="card-img-top" 
+            alt="continental">
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 " style="padding-bottom: 25px;">
+        <div class="card" style="width: 35rem; ">
+          <div class="card-body">
+            <a href="{% url 'foody_1:fastfood' %}">
+            <h3 class="card-text">Fast Food</h3>
+            <img  src="/static/img/menu/fastfood.jpg" 
+            class="card-img-top" 
+            alt="fastfood">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 " style="padding-bottom: 25px;">
+        <div class="card" style="width: 35rem; ">
+          <div class="card-body">
+            <a href="{% url 'foody_1:bev' %}">
+            <h3 class="card-text">Beverages</h3>
+            <img  src="/static/img/menu/beverages.jpg" 
+            class="card-img-top" 
+            alt="beverages">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 " style="padding-bottom: 25px;">
+        <div class="card" style="width: 35rem; ">
+          <div class="card-body">
+            <a href="{% url 'foody_1:des' %}">
+            <h3 class="card-text">Dessert</h3>
+            <img  src="/static/img/menu/dessert.jpg" 
+            class="card-img-top" 
+            alt="dessert">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<style>
+  .card {
+    background-color : #131A24;
+    border:none;
+    text-align: center;
+    color: white;
+    font-weight : bold ;
+    cursor:pointer;
+  }
+  
+  .card :hover {
+    background-color: #ffbe33;
+    color: #131A24;
+    font-weight : bold;
+  }
+  
+  .f {
+    font-size : 25px;
+  }
+
+</style>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% load static %}
+    <!-- footer section -->
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-col">
+            <div class="footer_contact">
+              <h4>Contact Us</h4>
+              <div class="contact_link_box">
+                <a href="#">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                  <span> India </span>
+                </a>
+                <a href="#">
+                  <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                  <span> Call +91 9087654321 </span>
+                </a>
+                <a href="#">
+                  <i class="bi bi-envelope-at-fill" aria-hidden="true"></i>
+                  <span> foodbymood@gmail.com </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <div class="footer_contact">              
+              <div class="contact_link_box">
+                <a href="{% url 'home' %}" class="footer-logo" style="padding-top:10px;"> Food By Mood </a>
+              </div>
+              <p style="padding-top:25px;">
+                By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. 
+                All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.
+              </p>
+              <div class="footer_social">
+                <a href="https://twitter.com/" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pankaj-shinde-316a25197/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <div class="footer_contact">
+              <h4>Address</h4>
+              <div class="contact_link_box">
+                <a href="#">
+                  <span>
+                    C/4, Manek Nagar, Shop 1, Near Ajanta Cinema.<br />
+                    Khau Galli, Jalgoan-425001 <br />
+                  </span>
+                </a>
+              </div> 
+            </div> 
+          </div> 
+          <div class="footer-info">
+            <p>
+              &copy; <span id="displayYear"></span> All Rights By
+              <a href="{% url 'home' %}">Food By Mood</a><br>
+              &copy; <span id="displayYear"></span>By
+              <a href="#" target="_blank">Pankaj & Aarti</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+    <!-- footer section -->
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/vendor/aos/aos.js"></script>
+    <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/static/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>
